@@ -1,8 +1,8 @@
 # B4B App Project
 
--Ironhack Web Development PT Madrid 04/2020
+Ironhack Web Development PT Madrid 04/2020
 
--Module 3 Final Project: Full Stack MERN Web Application
+Module 3 Final Project: Full Stack MERN Web Application
 
 The app must:
 
