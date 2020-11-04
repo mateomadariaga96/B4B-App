@@ -26,7 +26,7 @@ export const signup = (data) => http.post('/business', data)
 
 const listBusinesses = (options) => {
 	const config = {
-		params: {...options}
+		params: options  // {sector: options}
 	  };
 	return http.get('/businesses', config) //duda con filtros
 }
@@ -49,11 +49,13 @@ export const getProducts = () => http.get('/products')
 
 export const likeOpportunity = (oppId) => http.get(`/opportunity/like/${oppId}`, {})
 
-export const likeProduct = (productId) => http.get(`/product/like/${productId}`, {})
+export const createProposal = (data, oppId) => http.post(`/opportunity/${oppId}/proposal`, data)
+
+/* export const likeProduct = (productId) => http.get(`/product/like/${productId}`, {}) */
 
 export default {
   //login,
-  //signup,
+  signup,
   listBusinesses,
   logout,
   //listBusinessesBySector,

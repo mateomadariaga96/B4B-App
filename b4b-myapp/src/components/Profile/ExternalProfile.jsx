@@ -7,13 +7,18 @@ import B4BService from '../../services/B4BService'
 const ExternalProfile =({ location }) => {
 	const [ profile, setProfile ] = useState(location.state.opportunity);
 	const [ loading, setLoading ] = useState();
+
+	/* useEffect(() => {
+	listBusinesses(location.state)
+	.then
+	},[]) */
+
 	//const [ opportunities, setOpportunities ] = useState();
 	//const [ products, setProducts ] = useState();
 	console.log(profile);
   
-  if(profile.business.type === "Service Provider"){
 	return (
-		!loading ? 'loading..' :
+		//!loading ? 'loading..' :
 		<div>
 		<div>
 			<img src={profile.business.logo} alt="opportunity image"></img>
@@ -24,30 +29,13 @@ const ExternalProfile =({ location }) => {
 		  <p>{profile.business.web}</p>
 		  <p>{profile.business.linkedin}</p>
 		  <p>{profile.business.description}</p>
-		  <p>{profile.opportunities}</p>
+		  {/* <p>{profile.business.opportunities}</p> */}
 
 		</div>
 		</div>
 	   
 	)
-  } else {
-	  return (
-		<div>
-		<div>
-			<img src={profile.business.logo} alt="product image"></img>
-			<h3>{profile.business.name}</h3>
-		  <p>{profile.business.sector}</p>
-		  <p>{profile.business.type}</p>
-		  <p>{profile.business.size}</p>
-		  <p>{profile.business.web}</p>
-		  <p>{profile.business.linkedin}</p>
-		  <p>{profile.business.description}</p>
-		  <p>{profile.opportunities}</p>
-		</div>
-		</div>
-	  )
-  }
-	  
-  }
   
-  export default ExternalProfile
+}
+  
+export default ExternalProfile

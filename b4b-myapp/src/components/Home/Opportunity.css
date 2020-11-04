@@ -1,0 +1,18 @@
+.items {
+    border-radius: 18px
+}
+
+.tags {
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer
+}
+
+.about {
+    font-size: 14px
+}
+
+.user-info {
+	display: flex;
+	flex-direction: column;
+}

@@ -27,8 +27,8 @@ const Navbar = () => {
       <a className="navbar-brand" href="/">B4B LOGO</a>
 
       <div className="d-flex align-items-center">
-        <Link to="/products" className="d-block">Products</Link>
-        <Link to="/services" className="d-block">Services</Link>
+        <Link to="/products" className="d-block">Businesses</Link>
+        <Link to="/services" className="d-block">Sectors</Link>
         <Link to="/business/myprofile" className="d-block">{authContext.user.name}</Link>
         <button onClick={handleLogout} type="button" className="btn btn-small btn-danger">Log out</button>
       </div>

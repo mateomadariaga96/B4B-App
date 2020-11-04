@@ -10,7 +10,7 @@ class LikeBtn extends React.Component {
     B4BService.likeOpportunity(this.props.oppId)
       .then(response => {
         this.setState({
-          likes: this.state.likes + response.data.likes
+          likes: this.state.likes + response.likes
         })
       })
   }

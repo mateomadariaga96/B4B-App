@@ -3,6 +3,7 @@ import Spinner from '../Spinner'
 //import Product from './Product'
 import Opportunity from './Opportunity'
 import B4BService from '../../services/B4BService'
+import './Home.css'
 
 const Home =() => {
   const [ opportunities, setOpportunities ] = useState();
@@ -24,6 +25,7 @@ const Home =() => {
         setProducts(products)
       })
 },[]) */
+
 
 useEffect(() => {
   opportunities && setLoading(true)

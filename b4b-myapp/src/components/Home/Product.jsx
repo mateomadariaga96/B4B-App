@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 //import ProdLikeBtn from '../ProdLikeBtn'
 
 const Product = ({ product }) => {
@@ -21,10 +21,10 @@ const Product = ({ product }) => {
 
       <a href={`business/${business.id}/profile`} className="d-block">@{business.name}</a> 
 
-        {/* <ProdLikeBtn likes={productlikes} productId={id} /> */}
+        <ProdLikeBtn likes={productlikes} productId={id} />
       </div>
     </div>
   )
-}
+} */
 
 export default Product
