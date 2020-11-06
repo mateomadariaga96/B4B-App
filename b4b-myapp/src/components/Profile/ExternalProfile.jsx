@@ -29,6 +29,12 @@ const ExternalProfile =({ location }) => {
 		  <p>{profile.business.web}</p>
 		  <p>{profile.business.linkedin}</p>
 		  <p>{profile.business.description}</p>
+
+		  <div className="Opportunities">
+          	{profile.opportunity?.slice(0, 9).map((opp, i) => (
+          	<Opportunity opportunity={opp} key={i}/>
+        	))}
+	      </div>
 		  {/* <p>{profile.business.opportunities}</p> */}
 
 		</div>

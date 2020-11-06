@@ -1,5 +1,15 @@
 .items {
-    border-radius: 18px
+    border-radius: 18px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(104, 104, 104);
+    box-shadow: 5px 5px 2px 3px rgba(5, 20, 155, 0.2);
+}
+
+.rounded-circle {
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
 }
 
 .tags {
@@ -15,4 +25,54 @@
 .user-info {
 	display: flex;
 	flex-direction: column;
+}
+
+.header {
+    background-color: gainsboro;
+    padding: 30px;
+    border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+    width: 100%;
+}
+
+.name:hover {
+    text-decoration: none;
+}
+
+.user-title {
+    margin-left: 5%;
+    text-align: left;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.oppinfo {
+    font-size: 14px;
+    text-align: left;
+    margin: 20px 10px;
+}
+
+.oppinfo p {
+    margin: 10px;
+}
+
+.about-title {
+    color: rgb(0, 0, 0);
+}
+
+.footer {
+    background-color: rgb(255, 255, 129);
+    padding: 10px 10px 5px;
+    border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+    width: 100%;
+}
+
+.interactions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }

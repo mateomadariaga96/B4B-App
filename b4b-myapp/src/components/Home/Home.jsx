@@ -36,7 +36,11 @@ useEffect(() => {
       !loading ? 'loading..' :
       <div className="Home">
       <div className="Opp-section">
-      <h3>Latest Opportunitites</h3>
+      <div className="opp-title">
+        <b><h1>Latest Opportunitites</h1></b>
+        <hr></hr>
+      </div>
+      
         <div className="Opportunities">
           {opportunities?.slice(0, 9).map((opp, i) => (
           <Opportunity opportunity={opp} key={i}/>

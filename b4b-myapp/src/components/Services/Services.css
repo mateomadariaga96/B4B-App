@@ -1,7 +1,7 @@
 .box {
 	height: 150px;
 	width: 150px;
-	background-color: lightgray;
+	background-color: rgb(255, 255, 129);
 	margin: 50px;
 	text-align: center;
 	padding: 50px 30px;
@@ -14,6 +14,15 @@
 .boxes {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 20px 100px;
+	margin: 20px 0 20px 200px;
 	align-items: center;
+}
+
+.box:hover {
+	background-color: rgb(255, 255, 30);
+}
+
+.link:hover {
+	text-decoration: none;
+	color: rgb(10, 10, 235);
 }

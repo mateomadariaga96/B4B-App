@@ -66,7 +66,8 @@ export default {
   updateBusiness,
   getOpportunities,
   getProducts,
-  likeOpportunity
+  likeOpportunity,
+  createProposal
 }
 
  const option = {

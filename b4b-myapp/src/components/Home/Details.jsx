@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import LikeBtn from '../LikeBtn'
+import Comment from './Comment'
+import './Details.css'
 
 const Details =({ location }) => {
 	const [ detail, setProfile ] = useState(location.state.opportunity);
@@ -10,14 +13,14 @@ const Details =({ location }) => {
 	return (
 		//!loading ? 'loading..' :
 		<div class="post-detail-page">
-    		<div class="card mb-3">
+    		<div class="card col-sm-8 col-md-8 col-lg-8 mb-3 mt-3 detail">
        			<div class="card-header edit-post-card">
             		<div>
                 	<img class="rounded-circle post-image" src={detail.business.logo} alt="author photo"/>
-           		</div>
-           		<div class="edit-post-head">
-                <span class="card-title">{detail.title}</span>
-                	<div class="text-muted">Published on {detail.createdAt}</div>
+           			</div>
+           			<div class="edit-post-head">
+               		<span class="card-title"><b>{detail.title}</b></span>
+                	<div>@{detail.business.name}</div>
             	</div>
 
         		</div>
@@ -29,36 +32,26 @@ const Details =({ location }) => {
 				</div>
 
         	<div class="card-footer">
-            <button type="button" class="btn-sm btn btn-outline-danger" data-like-post="{{post._id}}">
-                <i class="fa fa-heart mr-1"></i>
-                <span class="likes-count">{detail.likes.length}</span>
-                Likes
-            </button>
-            <span class="text-muted"> - {detail.comments.length} comments </span>
+            <div className="interactions">
+                <LikeBtn likes={detail.likes} oppId={detail.id} />
+            </div>
+			<div className="interactions">
+				<span class="text-muted"><b>Comments </b>- {detail.comments.length} comments </span>
+			</div>
+            
         	</div>
 
         	<b><h3>Comments:</h3></b>
 
         	<div class="row border-bottom">
-            <div class="col-3">
-                <img class="rounded-circle" src={detail.business.logo} alt="author photo"/>
+            <div class="col-10 boxy">
+			<div className="Comments">
+          		{detail.comments?.slice(0, 9).map((comment, i) => (
+					<Comment comment={comment} key={i}/> 
+        		))}
+	      	</div>
             </div>
-            {/* <div class="col-9">
-                <h5>{detail.comments.business.name}</h5>
-                <p>{detail.comments.text}</p>
-                <br/>
-                <p class="text-muted">{detail.comment.createdAt}</p>
-            </div> */}
         	</div>
-
-        	{/* <div class="edit-post-form">
-            <form action="/post/{{post._id}}/comment" method="POST">
-                <label for="comment">New comment:</label>
-                <textarea class="form-control" name="comment" id="comment" placeholder="Your message"
-                    required=""></textarea>
-                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-            </form>
-        	</div> */}
 
     		</div>
 		</div>

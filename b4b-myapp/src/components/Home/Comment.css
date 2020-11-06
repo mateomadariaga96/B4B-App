@@ -1,0 +1,40 @@
+.comment {
+	width: 100%;
+	padding: 20px;
+	text-align: left;
+	font-size: 14px;
+}
+
+.comment-box {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.comment-name {
+	display: flex;
+	align-items: center;
+	text-align: left;
+	padding: 10px;
+	background-color: gainsboro;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+
+.comment-image {
+	width: 100px;
+}
+
+.comment-name b{
+	margin-left: 20px;
+}
+
+.comment-foot {
+	background-color: rgb(255, 247, 133);
+	height: 20px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 10px;
+}

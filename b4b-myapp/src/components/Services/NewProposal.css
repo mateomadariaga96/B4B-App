@@ -1,0 +1,14 @@
+.form-box {
+	background-color: ghostwhite;
+	padding: 50px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.description-box {
+	height: 100px;
+}
+
+.box-prop {
+	height: 100px;
+}
