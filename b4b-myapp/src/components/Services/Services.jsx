@@ -7,31 +7,31 @@ function Services() {
 		<div className="boxes">
 			
 			<div className="box">
-			<Link to={{pathame:`/business-list`, state:{sector: "AI/ML"}}}>AI/ML</Link>
+			<Link to={{pathname:"/business-list", state:{sector: "AI/ML"}}}>AI/ML</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Blockchain</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Blockchain"}}}>Blockchain</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Cybersecurity</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Cybersecurity"}}}>Cybersecurity</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Digital Marketing</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Digital Marketing"}}}>Digital Marketing</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Industry 4.0 & Automation</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Industry 4.0 & Automation"}}}>Industry 4.0 & Automation</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>IoT</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "IoT"}}}>IoT</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>RPA</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "RPA"}}}>RPA</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Software Development</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Software Development"}}}>Software Development</Link>
 			</div>
 			<div className="box">
-			<Link className="link" to=''>Telecoms</Link>
+			<Link className="link" to={{pathname:"/business-list", state:{sector: "Telecoms"}}}>Telecoms</Link>
 			</div>
 			{/* <div className="box">
 			<Link to=''>QA & Testing</Link>

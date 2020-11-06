@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuthContext } from '../contexts/AuthContext';
 import { login } from '../services/B4BService';
+import './Login.css'
 
 const validations = {
   email: v => v.length,
@@ -76,11 +77,17 @@ const Login = () => {
   const isError = Object.values(error).some(err => err)
 
   return (
-    <div className="row">
+    <div className="login">
+      <img src="../b4b-logo.png" alt="logo" />
       <div className="col">
-        {loginError && <div className="alert alert-danger">{loginError}</div>}
-
-        <form onSubmit={handleSubmit}>
+      
+      {loginError && <div className="alert alert-danger">{loginError}</div>}
+        <div className="card text-center login-card">
+          <div className="card-header title-login">
+            <h3><b>Log In</b></h3>
+          </div>
+          <div className="card-body">
+          <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Email</label>
 
@@ -118,17 +125,20 @@ const Login = () => {
             className="btn btn-primary"
             disabled={isError}
           >
-            Submit
+            Log In
           </button>
         </form>
-      </div>
-
-      <div className="col">
-        <label>State</label>
-
-        <pre>{JSON.stringify(state, null, " ")}</pre>
+        <div className="signup">
+          <Link to="/signup">Don't have an account? Sign up here!</Link>
+        </div>
+        </div>
+        
+        </div>
+        
       </div>
     </div>
+
+    
   );
 }
 

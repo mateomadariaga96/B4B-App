@@ -12,15 +12,14 @@ const Opportunity = ({ opportunity }) => {
   return (
     <div className="container mt-2">
       <div className="d-flex justify-content-center">
-        <div className="col-sm-12 col-md-8 col-lg-8">
+        <div className="col-sm-12 col-md-8 col-lg-10">
           <div className="list">
-            <div className="items bg-white mt-3">
+            <div className="items bg-white mt-4">
               <div className="d-flex user-info">
                 <div className="d-flex flex-row align-items-center header">
                   <img className="rounded-circle" src={business.logo} width="120"/>
                   <div className="d-flex flex-column user-title"><span className="font-weight-bold title">{title}</span><span><b><Link to={{pathname:`/business/profile`, state:{opportunity}}} className="d-block name">@{business.name}</Link></b></span>
                   </div>
-                  <hr/>
                 </div>
                 <div>
                 <hr></hr>
@@ -42,7 +41,7 @@ const Opportunity = ({ opportunity }) => {
                       <Link to={{pathname:`/opportunity-details`, state:{opportunity}}} >Add Comment</Link>
                       </div>
                       <div>
-                      <ProposalBtn/>
+                      <ProposalBtn proposals={proposals} opportunity={opportunity}/>
                     </div>
                     </div>
                   </div>

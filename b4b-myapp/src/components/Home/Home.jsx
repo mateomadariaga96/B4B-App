@@ -3,6 +3,7 @@ import Spinner from '../Spinner'
 //import Product from './Product'
 import Opportunity from './Opportunity'
 import B4BService from '../../services/B4BService'
+import {Link} from 'react-router-dom'
 import './Home.css'
 
 const Home =() => {
@@ -36,10 +37,16 @@ useEffect(() => {
       !loading ? 'loading..' :
       <div className="Home">
       <div className="Opp-section">
-      <div className="opp-title">
-        <b><h1>Latest Opportunitites</h1></b>
-        <hr></hr>
+      <div className="opp-title-box">
+        <div className="opp-title">
+          <b><h1>Latest Opportunitites</h1></b>
+        </div>
+        <div className="opp-title-btn">
+        <Link className="btn btn-md btn-primary opp-btn" to='/new-opportunity'>New Opportunity</Link>
       </div>
+      </div>
+      <hr></hr>
+      
       
         <div className="Opportunities">
           {opportunities?.slice(0, 9).map((opp, i) => (

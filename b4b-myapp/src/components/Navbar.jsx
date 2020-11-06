@@ -36,9 +36,6 @@ const Navbar = () => {
           <b><Link to="/home" className="d-block linky">Home</Link></b>
         </div>
         <div>
-          <b><Link to="/products" className="d-block linky">Businesses</Link></b>
-        </div>
-        <div>
           <b><Link to="/services" className="d-block linky">Sectors</Link></b>
         </div>
         <div>
@@ -46,7 +43,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <button onClick={handleLogout} type="button" className="btn btn-small btn-danger">Log out</button>
+        <button onClick={handleLogout} type="button" className="btn btn-small btn-outline-danger log-out">Log out</button>
       </div>
       </div>
       {/* <div id="navbar-elements" class="dropdown">

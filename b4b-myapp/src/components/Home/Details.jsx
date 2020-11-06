@@ -40,8 +40,9 @@ const Details =({ location }) => {
 			</div>
             
         	</div>
-
-        	<b><h3>Comments:</h3></b>
+			<div className="comments-title">
+				<b><h3>Comments:</h3></b>
+			</div>
 
         	<div class="row border-bottom">
             <div class="col-10 boxy">

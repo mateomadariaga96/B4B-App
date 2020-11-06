@@ -4,45 +4,116 @@ import Spinner from '../Spinner'
 //import Product from './Product'
 import Opportunity from '../Home/Opportunity'
 import B4BService from '../../services/B4BService'
+import './Profile.css'
 
 const Profile =({ location }) => {
 	const authContext = useAuthContext()
 	console.log(authContext.user);
-	const [ opportunities, setOpportunities ] = useState();
-	const [ loading, setLoading ] = useState();
 
-	useEffect(() => {
-		B4BService.getOpportunities()
-		.then(opportunities => {
-		  console.log(opportunities);
-		  setOpportunities(opportunities)
-	  })
-	  },[])
-
-	useEffect(() => {
-		opportunities && setLoading(true)
-	},[opportunities])
 		
   //usar authcontect como en navbar para mi usuario
   //user.name
 
 	return (
-		!loading ? 'loading..' :
 		<div>
 		<div>
-			<img src={authContext.user.logo} alt="opportunity image"></img>
-		  <h3>{authContext.user.name}</h3>
-		  <p>{authContext.user.sector}</p>
-		  <p>{authContext.user.type}</p>
-		  <p>{authContext.user.size}</p>
-		  <p>{authContext.user.web}</p>
-		  <p>{authContext.user.linkedin}</p>
-		  <p>{authContext.user.description}</p>
-		  {/* <div className="Opportunities">
-          	{authContext.user.opportunities?.slice(0, 9).map((opp, i) => (
-          	<Opportunity opportunity={opp} key={i}/>
+			<div class="container bootstrap-snippet header-container">
+    			<div class="bg-white card-profile mt-5">
+      				<div class="container py-5">
+        				<div class="profile-container">
+						<div className="profile-left">
+							<img src={authContext.user.logo} alt class="d-block rounded-circle profile-logo"/>
+
+							<div className="profile-data">
+								<p><b>{authContext.user.sector}</b></p>
+		  						<p>{authContext.user.type}</p>
+		  						<p>{authContext.user.size}</p>
+		  						<p>
+								  <img className="icons" src="../web.png" />
+								  <a href={authContext.user.web}>Visit Website</a>
+								</p>
+								<p>
+								<img className="icons" src="../linkedin.png" />
+								<a href={authContext.user.linkedin}>Visit LinkedIn Profile</a>
+								</p>
+							</div>
+						</div>
+          				
+          					<div class="media-body ml-5">
+            					<h4 class="font-weight-bold mb-4 profile-title">{authContext.user.name}</h4>
+            						<div class="text-muted mb-4 profile-description">
+									{authContext.user.description}
+            						</div>
+									<hr></hr>
+								<div className="user-interactions">
+            					<a href="#" class="d-inline-block text-dark">
+              					<strong>{authContext.user.opportunities.length}</strong>
+              					<span class="text-muted"> opportunities</span>
+            					</a>
+            					<a href="#" class="d-inline-block text-dark ml-3">
+              					<strong>{authContext.user.likes.length}</strong>
+              					<span class="text-muted"> liked opportunities</span>
+            					</a>
+            					<a href="#" class="d-inline-block text-dark ml-3">
+              					<strong>{authContext.user.proposals.length}</strong>
+              					<span class="text-muted"> proposals</span>
+            					</a>
+								</div>
+          					</div>
+        				</div>
+      				</div>
+    			</div>
+			</div>
+
+		  <div className="prop-title">
+		  <h3><b>Last Proposals Made</b></h3>
+		  <hr></hr>
+		  </div>
+		  <div className="Proposals">
+          	{authContext.user.proposals?.slice(0, 3).map((prop, i) => (
+			<div className="card prop-card">
+				<div class="card-header">
+					{prop.status}
+  				</div>
+				<div class="card-body card-body1">
+    				<h6 class="card-title">{prop.title}</h6>
+					<hr></hr>
+    				<p class="card-text">{prop.description}</p>
+    				<a href="#" class="btn btn-danger">Delete</a>
+  				</div>
+			</div>
         	))}
-	      </div> */}
+	      </div>
+		  <div className="Opportunities">
+		  <div className="title-opp">
+		  	<h3><b>My Latest Opportunities</b></h3>
+			<hr className="profile-line"></hr>
+		  </div>
+		  
+          	{authContext.user.opportunities?.slice(0, 9).map((opp, i) => (
+			<div>
+				<div class="card opp-profile-card">
+  					<div class="card-body">
+    				<h5 class="card-title">{opp.title}</h5>
+					<hr></hr>
+    				<p class="card-text">{opp.description}</p>
+  					</div>
+					  <div class="card-header opp-footer">
+					  <div>
+					  <b>{opp.start}</b>
+					  </div>
+					  <div>
+					  <b>{opp.duration}</b>
+					  </div>
+					  <div>
+					  <b>{opp.budget}</b>
+					  </div>
+    					
+  					</div>
+				</div>
+			</div>
+        	))}
+	      </div>
 
 		</div>
   
@@ -51,33 +122,6 @@ const Profile =({ location }) => {
 			))}
 		  </div> */}
 		</div>
-	   
-		
-	  /* !loading ? 'loading..' :
-	  <div className="Profile">
-	  {profile?.map((profile, i) => (
-			  <Profile profile={profile} key={i}/>
-		  ))} */
-
-	  /* <div className="Opp-section">
-	  <h3>Ongoing Opportunitites</h3>
-		<div className="Opportunities">
-		  {opportunities?.map((opp, i) => (
-		  <Opportunity opportunity={opp} key={i}/>
-		))}
-		  </div>
-	  </div>
-		
-	  <div className="Product-section">
-	  <h3>Company's Products</h3>
-		<div className="Products">
-			{products?.map((product, i) => (
-			  <Product product={product} key={i}/>
-		  ))}
-		</div>
-	  </div> */
-		  
-	  /* </div> */
 	)
 	  
 }

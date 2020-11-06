@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/Login';
 import Signup from './components/misc/Register';
 import Home from './components/Home/Home';
+import NewOpp from './components/Home/NewOpp';
 import Details from './components/Home/Details';
 import Navbar from './components/Navbar'
 import ExternalProfile from './components/Profile/ExternalProfile'
@@ -30,6 +31,8 @@ class App extends React.Component {
           <NotAuthenticatedRoute exact path="/signup" component={Signup} />        
 
           <AuthenticatedRoute exact path="/home" component={Home} />
+
+          <AuthenticatedRoute exact path="/new-opportunity" component={NewOpp} />
 
           <AuthenticatedRoute exact path="/opportunity-details" component={Details} />
 

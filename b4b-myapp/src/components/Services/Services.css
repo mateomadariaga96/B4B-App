@@ -1,7 +1,7 @@
 .box {
 	height: 150px;
 	width: 150px;
-	background-color: rgb(255, 255, 129);
+	background-color: rgb(255, 255, 177);
 	margin: 50px;
 	text-align: center;
 	padding: 50px 30px;
@@ -19,7 +19,7 @@
 }
 
 .box:hover {
-	background-color: rgb(255, 255, 30);
+	background-color: rgb(245, 245, 0);
 }
 
 .link:hover {

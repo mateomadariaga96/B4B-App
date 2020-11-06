@@ -39,18 +39,6 @@ class Register extends React.Component {
 
     const { data } = this.state
 
-   /*  const formData = new FormData()
-    formData.append('name', data.name)
-    formData.append('logo', data.logo)
-    formData.append('password', data.password)
-    formData.append('email', data.email)
-    formData.append('location', data.location)
-    formData.append('size', data.size)
-    formData.append('sector', data.sector)
-    formData.append('description', data.description)
-    formData.append('web', data.web)
-    formData.append('linkedin', data.linkedin) */
-
     this.setState({ loading: true, error: false }, () => {
       B4BService.signup(data)
         .then(() => {
