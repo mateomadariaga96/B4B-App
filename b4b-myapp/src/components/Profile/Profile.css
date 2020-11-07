@@ -26,7 +26,7 @@
 }
 
 .card-body1 {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .profile-logo {
@@ -38,7 +38,7 @@
 }
 
 .profile-description {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .profile-data {
@@ -59,7 +59,7 @@
 }
 
 .user-interactions {
-	font-size: 13px;
+	font-size: 16px;
 }
 
 .profile-title {
@@ -119,4 +119,6 @@
 	margin-right: 10px;
 }
 
-
+.delete {
+	margin-top: 20px;
+}

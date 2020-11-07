@@ -67,38 +67,43 @@ const ExternalProfile =({ location }) => {
     			</div>
 			</div>
 			<div className="Opportunities">
-		  <div className="title-opp-external">
-		  	<h3><b>{profile.name}: Latest Opportunities</b></h3>
-			<hr className="profile-line"></hr>
-		  </div>
+		  		<div className="title-opp-external">
+		  			<h3><b>{profile.name}: Latest Opportunities</b></h3>
+					<hr className="profile-line"></hr>
+		  		</div>
 		  
-          	{profile.business.opportunities?.slice(0, 9).map((opp, i) => (
-			<div>
-				<div class="card opp-external-card">
-  					<div class="card-body">
-    				<h5 class="card-title">{opp.title}</h5>
-					<hr></hr>
-    				<p class="card-text">{opp.description}</p>
-  					</div>
-					  <div class="card-header opp-footer">
-					  <div>
-					  <b>{opp.start}</b>
-					  </div>
-					  <div>
-					  <b>{opp.duration}</b>
-					  </div>
-					  <div>
-					  <b>{opp.budget}</b>
-					  </div>
-    					
-  					</div>
+          		{profile.business.opportunities?.reverse().slice(0, 9).map((opp, i) => (
+				<div>
+					<div className="card opp-external-card">
+  						<div className="card-body">
+    						<h5 className="card-title">{opp.title}</h5>
+							<hr></hr>
+							<div>
+					  			<div>
+					  				<b>Start: </b>{opp.start}
+					  			</div>
+					  			<div>
+					  				<b>Duration: </b>{opp.duration}
+					  			</div>
+					  			<div>
+					  				<b>Budget: </b>{opp.budget}
+					  			</div>
+					  		</div>
+							  <hr></hr>
+    						<p className="card-text">{opp.description}</p>
+  						</div>
+						<div className="card-header opp-footer">
+					  		<div className="opp-button">
+					  			<button className="btn btn-primary">Make a proposal</button>
+					  		</div>
+  						</div>
+					</div>
 				</div>
-			</div>
-        	))}
+        		))}
 	      	</div>
 	
-			</div>
-			</div>
+		</div>
+		</div>
 		   
 		)
 	} else {
@@ -159,24 +164,30 @@ const ExternalProfile =({ location }) => {
 			<hr className="profile-line"></hr>
 		  </div>
 		  
-          	{profile.opportunities?.slice(0, 9).map((opp, i) => (
+          	{profile.opportunities?.reverse().slice(0, 9).map((opp, i) => (
 			<div>
 				<div class="card opp-external-card">
   					<div class="card-body">
+					  <div>
+					  		<div>
+					  			<b>Start: </b>{opp.start}
+					  		</div>
+					  		<div>
+					  			<b>Duration: </b>{opp.duration}
+					  		</div>
+					  		<div>
+					  			<b>Budget: </b>{opp.budget}
+					  		</div>
+					  	</div>
+						<hr></hr>
     				<h5 class="card-title">{opp.title}</h5>
 					<hr></hr>
     				<p class="card-text">{opp.description}</p>
   					</div>
 					  <div class="card-header opp-footer">
-					  <div>
-					  <b>{opp.start}</b>
-					  </div>
-					  <div>
-					  <b>{opp.duration}</b>
-					  </div>
-					  <div>
-					  <b>{opp.budget}</b>
-					  </div>
+					  	<div className="opp-button">
+					  		<button className="btn btn-primary">Make a proposal</button>
+					  	</div>
     					
   					</div>
 				</div>

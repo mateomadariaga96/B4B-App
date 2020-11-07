@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useAuthContext } from '../../contexts/AuthContext'
+import LikeBtn from '../LikeBtn'
 import Spinner from '../Spinner'
 //import Product from './Product'
 import Opportunity from '../Home/Opportunity'
@@ -90,7 +91,7 @@ const Profile =({ location }) => {
 			<hr className="profile-line"></hr>
 		  </div>
 		  
-          	{authContext.user.opportunities?.slice(0, 9).map((opp, i) => (
+          	{authContext.user.opportunities?.reverse().map((opp, i) => (
 			<div>
 				<div class="card opp-profile-card">
   					<div class="card-body">
@@ -108,6 +109,7 @@ const Profile =({ location }) => {
 					  <div>
 					  <b>{opp.budget}</b>
 					  </div>
+					  <a href="#" class="btn btn-danger delete">Delete</a>
     					
   					</div>
 				</div>

@@ -124,7 +124,7 @@ const NewOpp = () => {
 			  type="submit"
 			  className="btn btn-block btn-primary mb-3">
 			  {/* disabled={this.state.loading}> */}
-			  Submit Proposal
+			  Create new opportunity
 			</button>
 		  </form>
 		</div>

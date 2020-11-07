@@ -2,9 +2,9 @@
 	height: 150px;
 	width: 150px;
 	background-color: rgb(255, 255, 177);
-	margin: 50px;
+	margin: 50px 90px;
 	text-align: center;
-	padding: 50px 30px;
+	padding: 40px 30px;
 	border-radius: 10px;
 	/* border-style: solid;
 	border-color: rgb(58, 58, 58); */
@@ -22,7 +22,16 @@
 	background-color: rgb(245, 245, 0);
 }
 
+.link {
+	color: black;
+}
+
 .link:hover {
 	text-decoration: none;
-	color: rgb(10, 10, 235);
+	color: rgb(36, 138, 221);
+}
+
+.box-image {
+	width: 50px;
+	margin-bottom: 5px;
 }

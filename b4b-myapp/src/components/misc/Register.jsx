@@ -1,6 +1,7 @@
 import React from 'react'
 import B4BService from '../../services/B4BService'
 import { Link, Redirect } from 'react-router-dom'
+import './Register.css'
 
 class Register extends React.Component {
   state = {
@@ -59,10 +60,15 @@ class Register extends React.Component {
 
     return (
       <div className="Register">
-	  	<h3>Register your business here!</h3>
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
+        <div className="card text-center login-card">
+          <div className="card-header title-login">
+            <h3><b>Log In</b></h3>
+          </div>
+          <div className="card-body register-body">
+          <img className="register-logo" src='../b4b-logo.png' />
+          <form onSubmit={this.handleSubmit}>
+          <div className="form-group mb-5">
+            <label htmlFor="name"><b>Name</b></label>
 
             <input
               value={this.state.data.name}
@@ -76,8 +82,8 @@ class Register extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
+          <div className="form-group mb-5">
+            <label htmlFor="email"><b>Email</b></label>
 
             <input
               value={this.state.data.email}
@@ -92,7 +98,7 @@ class Register extends React.Component {
           </div>
 
           <div className="form-group mb-5">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password"><b>Password</b></label>
 
             <input
               value={this.state.data.password}
@@ -105,8 +111,8 @@ class Register extends React.Component {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="avatar">Logo</label>
+          <div className="form-group mb-5">
+            <label htmlFor="avatar"><b>Logo</b></label>
 
             <input
               onChange={this.handleChange}
@@ -117,8 +123,8 @@ class Register extends React.Component {
             />
           </div>
 
-		  <div className="form-group mb-5">
-            <label htmlFor="password">Location</label>
+		      <div className="form-group mb-5">
+            <label htmlFor="password"><b>Location</b></label>
 
             <input
               value={this.state.data.location}
@@ -131,9 +137,9 @@ class Register extends React.Component {
             />
           </div>
 
-		  <div className="form-group mb-5">
-		  	<label>
-          	Pick your sector:
+		      <div className="form-group mb-5">
+		  	  <label>
+          <b>Pick your sector: </b>
           	<select name="sector" value={this.state.data.sector} onChange={this.handleChange}>
             	<option value="AI/ML">AI/ML</option>
             	<option value="Blockchain">Blockchain</option>
@@ -146,12 +152,12 @@ class Register extends React.Component {
             	<option value="Telecoms">Telecoms</option>
             	<option value="QA & Testing">QA & Testing</option>
           	</select>
-        	</label>
-		  </div>
+        	  </label>
+		        </div>
 
-		  <div className="form-group mb-5">
-		  	<label>
-          	What's your company's size?:
+		      <div className="form-group mb-5">
+		  	  <label>
+          	<b>What's your company's size?: </b>
           	<select name="size" value={this.state.data.size} onChange={this.handleChange}>
             	<option value="0 to 10 employees">0 to 10 employees</option>
             	<option value="10 to 50 employees">10 to 50 employees</option>
@@ -159,10 +165,10 @@ class Register extends React.Component {
             	<option value="+250 employees">+250 employees</option>
           	</select>
         	</label>
-		  </div>
+		      </div>
 
-		  <div className="form-group mb-5">
-            <label htmlFor="password">Description</label>
+		      <div className="form-group mb-5">
+            <label htmlFor="password"><b>Description</b></label>
 
             <input
               value={this.state.data.description}
@@ -175,8 +181,8 @@ class Register extends React.Component {
             />
           </div>
 
-		  <div className="form-group mb-5">
-            <label htmlFor="password">Web URL</label>
+		      <div className="form-group mb-5">
+            <label htmlFor="password"><b>Web URL</b></label>
 
             <input
               value={this.state.data.web}
@@ -189,8 +195,8 @@ class Register extends React.Component {
             />
           </div>
 
-		  <div className="form-group mb-5">
-            <label htmlFor="password">LinkedIn Page</label>
+		      <div className="form-group mb-5">
+            <label htmlFor="password"><b>LinkedIn Page</b></label>
 
             <input
               value={this.state.data.linkedin}
@@ -207,9 +213,11 @@ class Register extends React.Component {
             type="submit"
             className="btn btn-block btn-primary mb-3"
             disabled={this.state.loading}>
-            Sign up
+            Sign up to B4B - Tech
           </button>
         </form>
+        </div>
+      </div>
       </div>
     )
   }

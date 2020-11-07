@@ -1,7 +1,5 @@
 .items {
     border-radius: 18px;
-    border-width: 2px;
-    border-style: solid;
     -webkit-box-shadow: 0px 0px 5px 5px rgba(5, 20, 155, 0.2);
 	-moz-box-shadow: 0px 0px 5px 5px rgba(5, 20, 155, 0.2);
 	box-shadow: 0px 0px 5px 5px rgba(5, 20, 155, 0.2);

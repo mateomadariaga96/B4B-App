@@ -15,7 +15,7 @@ const Company = ({ company }) => {
             <div className="items p-2 bg-white px-3 border mt-2">
               <div className="d-flex user-info">
                 <div className="d-flex flex-row align-items-center header">
-                  <img className="rounded-circle" src={logo} width="60"/>
+                  <img className="rounded-circle mr-5" src={logo} width="100"/>
                   <div className="d-flex flex-column user-name-followers"><span><Link to={{pathname:`/business/profile`, state:{opportunity: company}}} className="d-block font-weight-bold">@{name}</Link></span>
                   </div>
                 </div>

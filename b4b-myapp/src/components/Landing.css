@@ -1,0 +1,32 @@
+.back {
+	background: no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.landing-body p {
+	color: white;
+}
+
+.landing-body {
+	margin: 50px 400px 100px 100px;
+	text-align: left;
+	width: 500px;
+}
+
+.landing-title {
+	font-size: 40px;
+}
+
+.landing-btn {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.logo-landing {
+	width: 150px;
+	height: 150px;
+}

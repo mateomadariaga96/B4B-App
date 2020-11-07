@@ -34,7 +34,7 @@ useEffect(() => {
 
   
     return (
-      !loading ? 'loading..' :
+      !loading ? <b className="loading">'Loading..'</b>:
       <div className="Home">
       <div className="Opp-section">
       <div className="opp-title-box">

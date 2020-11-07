@@ -32,13 +32,15 @@ const Navbar = () => {
       <div className="d-flex align-items-center">
       <div className="nav-menu">
         <div>
-          <i class="fa fa-home"></i>
+          <img src="../home-5-24.png" />
           <b><Link to="/home" className="d-block linky">Home</Link></b>
         </div>
         <div>
+        <img src="../network-24.png" />
           <b><Link to="/services" className="d-block linky">Sectors</Link></b>
         </div>
         <div>
+        <img src="../user-2-24.png" />
           <b><Link to="/business/myprofile" className="d-block linky">My Profile</Link></b>
         </div>
       </div>
