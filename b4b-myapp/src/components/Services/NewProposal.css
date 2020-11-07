@@ -1,7 +1,8 @@
 .form-box {
 	background-color: ghostwhite;
 	padding: 50px;
-	width: 80%;
+	width: 70%;
+	height: 500px;
 	margin: 0 auto;
 }
 
@@ -11,4 +12,12 @@
 
 .box-prop {
 	height: 100px;
+}
+
+.newprop-title {
+	margin: 30px;
+}
+
+.submit-btn {
+	margin-top: 150px;
 }

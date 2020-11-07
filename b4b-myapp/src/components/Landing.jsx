@@ -18,7 +18,7 @@ function Landing () {
 				</div>
 				<div className="landing-btn">
 					<div>
-						<Link className="btn btn-primary" to="/signup">Signup for free</Link>
+						<Link className="btn btn-primary" to="/signup">Sign up for free</Link>
 					</div>
 					<div>
 						<Link className="btn btn-primary" to="/login">Go to Login</Link>

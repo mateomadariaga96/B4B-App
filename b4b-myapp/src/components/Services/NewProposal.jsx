@@ -48,7 +48,10 @@ const Proposal = ({ location }) => {
 
     return (
       <div className="New-proposal">
-	  	<h3>Create a proposal</h3>
+      <div className="newprop-title">
+      <h3>Create a proposal</h3>
+      </div>
+	  	
         <div className="form-box">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -69,7 +72,7 @@ const Proposal = ({ location }) => {
           <div className="form-group description-box">
             <label htmlFor="description">Description</label>
 
-            <input
+            <textarea
               value={data.description}
               onChange={handleChange}
               autoComplete="off"
@@ -78,12 +81,12 @@ const Proposal = ({ location }) => {
               className={`form-control box-prop`}
               id="description"
               placeholder="Describe your proposal."
-            />
+            ></textarea>
           </div>
 
           <button
             type="submit"
-            className="btn btn-block btn-primary mb-3">
+            className="btn btn-block btn-primary submit-btn">
             {/* disabled={this.state.loading}> */}
             Submit Proposal
           </button>

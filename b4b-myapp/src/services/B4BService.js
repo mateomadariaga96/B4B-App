@@ -53,6 +53,8 @@ export const createProposal = (data, oppId) => http.post(`/opportunity/${oppId}/
 
 export const createOpp = (data) => http.post(`/opportunity`, data)
 
+export const comment = (data, oppId) => http.post(`/opportunity/${oppId}/comment`, data)
+
 /* export const likeProduct = (productId) => http.get(`/product/like/${productId}`, {}) */
 
 export default {
@@ -70,7 +72,8 @@ export default {
   getProducts,
   likeOpportunity,
   createProposal,
-  createOpp
+  createOpp,
+  comment
 }
 
  const option = {

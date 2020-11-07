@@ -42,12 +42,13 @@ const NewOpp = () => {
 	}
 
 	return (
-		<div className="New-form">
+		<div className="New-form new-container">
 			<div className="new-title">
 				<h3>Create an opportunity</h3>
+				<hr></hr>
 			</div>
 			
-		<div className="form-box">
+		<div className="opp-form">
 		  	<form onSubmit={handleSubmit}>
 			<div className="form-group">
 			  <label htmlFor="title"><b>Title</b></label>
@@ -67,7 +68,7 @@ const NewOpp = () => {
 			<div className="form-group description-box">
 			  <label htmlFor="description"><b>Description</b></label>
   
-			  <input
+			  <textarea
 				value={data.description}
 				onChange={handleChange}
 				autoComplete="off"
@@ -76,7 +77,7 @@ const NewOpp = () => {
 				className={`form-control box-prop`}
 				id="description"
 				placeholder="Describe your proposal."
-			  />
+			  ></textarea>
 			</div>
 
 			<div className="form-group description-box">

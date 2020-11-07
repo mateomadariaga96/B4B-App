@@ -1,14 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import LikeBtn from '../LikeBtn'
 import Comment from './Comment'
+import { useAuthContext } from '../../contexts/AuthContext'
+import B4BService from '../../services/B4BService'
+import { Link, Redirect, useHistory } from 'react-router-dom'
 import './Details.css'
 
 const Details =({ location }) => {
+	const loc = useHistory()
 	const [ detail, setProfile ] = useState(location.state.opportunity);
 	const [ loading, setLoading ] = useState();
-	//const [ opportunities, setOpportunities ] = useState();
-	//const [ products, setProducts ] = useState();
+	const {user} = useAuthContext()
+  	const [data, setData] = useState({
+    text: '',
+	})
 	console.log(detail);
+
+	const handleChange = (event) => {
+		const { name, value } = event.target
+	
+		setData({
+			...data,
+			[name]: value
+		})
+	}
+
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		const newData = {
+		  ...data,
+		  business: user.id,
+		  opportunity: location.state.opportunity.id
+		}
+	
+		  B4BService.comment(newData)
+			.then((response) => {
+			  console.log("newData", response);
+			  loc.replace("/home")
+			})
+			.catch(() => {
+			  //setState({ error: true, loading: false })
+			})
+	}
   
 	return (
 		//!loading ? 'loading..' :
@@ -43,11 +76,24 @@ const Details =({ location }) => {
 			<div className="comments-title">
 				<b><h3>Comments:</h3></b>
 			</div>
+			<div class="edit-post-form">
+            <form onSubmit={handleSubmit}>
+                <label for="comment"><b>New comment:</b></label>
+                <textarea value={data.text}
+              	onChange={handleChange}
+              	autoComplete="off"
+              	name="text"
+              	type="text"
+              	className={`form-control`} placeholder="Your message"
+                required=""></textarea>
+                <button type="submit" id="submit" class="btn  btn-primary m-4">Submit</button>
+            </form>
+        </div>
 
         	<div class="row border-bottom">
             <div class="col-10 boxy">
 			<div className="Comments">
-          		{detail.comments?.slice(0, 9).map((comment, i) => (
+          		{detail.comments?.reverse().slice(0, 9).map((comment, i) => (
 					<Comment comment={comment} key={i}/> 
         		))}
 	      	</div>
